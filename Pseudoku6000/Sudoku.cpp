@@ -80,6 +80,11 @@ Sudoku::Sudoku(string a_filePath)
 {
 	ifstream file;
 	file.open(a_filePath);
+	if (!file.is_open()) {
+		cout << "Error opening the file" << endl;
+		system("pause");
+		exit(1);
+	} 
 	int file_values[81];
 	for (int i = 0; i < 81; i++)
 		file >> file_values[i];

@@ -71,6 +71,7 @@ private:
 	const int m_originRow,
 		m_originColumn; // Holds the positioning of the box in the set, [0][0] is the upper left
 	
+	std::vector<int> m_boxContent;
 	int m_box[ROW_COUNT][COLUMN_COUNT] = { 0 };
 
 	bool m_RowHasBeenTold[ROW_COUNT][POSSIBILITY_COUNT];

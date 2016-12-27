@@ -1,18 +1,50 @@
 #include <iostream>
-#include "Sudoku.h"
+
 
 using namespace std;
+#include "Sudoku.h"
 
-#define FILE_PATH "I:\\[Work]\\2016 Fall Semester\\Analysis of Algorithms\\SudokuBoard.txt"
+void solveOne();
+void solveTwo();
+void solveThree();
 
 int main()
 {
-	Sudoku sudocode(FILE_PATH);
+	solveOne();
+	solveTwo();
+	solveThree();
+	
+	return 0;
+}
+
+
+//#################  TESTING CODE  ####################
+void solveOne() {
+	Sudoku sudocode("easypuzzle1.txt");
 	sudocode.DisplayBoard();
 
 	sudocode.SolvePuzzle();
 	//sudocode.bruteForce();
 
 	system("pause");
-	return 0;
+}
+
+void solveTwo() {
+	Sudoku sudocode("easypuzzle2.txt");
+	sudocode.DisplayBoard();
+
+	sudocode.SolvePuzzle();
+	//sudocode.bruteForce();
+
+	system("pause");
+}
+
+void solveThree() {
+	Sudoku sudocode("easypuzzle3.txt");
+	sudocode.DisplayBoard();
+
+	sudocode.SolvePuzzle();
+	//sudocode.bruteForce();
+
+	system("pause");
 }
