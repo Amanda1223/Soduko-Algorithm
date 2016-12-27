@@ -242,7 +242,7 @@ void Sudoku::SolveUseBruteForce()
 {
 	ConvertBoxToBoard();
 	m_brute = BruteForce(m_board);
-	m_brute.BruteForce::solve();
+	m_brute.BruteForce::Solve();
 }
 /*void Sudoku::SolveUseBruteForce();*/
 

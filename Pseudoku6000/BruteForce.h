@@ -1,3 +1,15 @@
+// Project Group Members :
+//					Amanda Steidl
+//					Kyle Stanski
+//					Lucas Crocket
+
+// Course :		Analysis of Algorithms
+// Professor :	D'Antonio
+// Project	:	Final - Soduko Algorithm
+// Due Date :	December 28, 2016
+
+//########################		CURRENT FILE : BruteForce.h	###############################
+
 #pragma once
 
 #include <iostream>
@@ -15,20 +27,20 @@ using namespace std;
 class BruteForce {
 public:
 	BruteForce(int[9][9]);
-	bool solve();
-	void printBoard();
+	bool Solve();
+	void PrintBoard();
 	
 private:
-	// Member Variables.
+	// ################## MEMBER VARIABLES ###############################
 	int board[ROW_COUNT][COLUMN_COUNT];
 	int boxSetBoard[OUTER_ROW_COUNT][OUTER_COL_COUNT][INNER_ROW_COUNT][INNER_COL_COUNT];
 	int original[ROW_COUNT][COLUMN_COUNT];
 
-	// Utility Functions.
-	void set(int a_row, int a_col, int a_value);
-	void unset(int a_row, int a_col);
-	void next(int &x, int &y);
-	void previous(int &x, int &y);
+	// ################### UTILITY FUNCTIONS #############################
+	void SetValue(int a_row, int a_col, int a_value);
+	void UnsetValue(int a_row, int a_col);
+	void NextPosition(int &a_row, int &a_col);
+	void PreviousPosition(int &a_row, int &a_col);
 	bool isValid(int a_row, int a_col, int a_value);
-	bool recursive(int a_row, int a_col);
+	bool _Solve(int a_row, int a_col);
 };
